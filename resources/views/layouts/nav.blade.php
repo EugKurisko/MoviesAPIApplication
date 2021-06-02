@@ -11,7 +11,7 @@
             <li class="ml-16" id="zone-movies">
                 <div class="relative inline-block text-left">
                     <div id="drop-movies">
-                        <a href="#" class="inline-flex justify-center w-fer-graull shadow-sm px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-movies" aria-expanded="true" aria-haspopup="true">
+                        <a href="#" class="inline-flex justify-center w-fer-graull shadow-sm px-4 py-2 text-sm font-medium focus:outline-none" id="menu-movies" aria-expanded="true" aria-haspopup="true">
                             Movies
                         </a>
                     </div>
@@ -20,7 +20,7 @@
             <li class="ml-8" id="zone-tvs">
                 <div class="relative inline-block text-left">
                     <div id="drop-tvs">
-                        <a href="#" class="inline-flex justify-center w-fer-graull shadow-sm px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-tvs" aria-expanded="true" aria-haspopup="true">
+                        <a href="#" class="inline-flex justify-center w-fer-graull shadow-sm px-4 py-2 text-sm font-medium focus:outline-none" id="menu-tvs" aria-expanded="true" aria-haspopup="true">
                             TVShows
                         </a>
                     </div>
@@ -29,7 +29,7 @@
             <li class="ml-8" id="zone-actors">
                 <div class="relative inline-block text-left">
                     <div id="drop-actors">
-                        <a href="#" class="inline-flex justify-center w-fer-graull shadow-sm px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-actors" aria-expanded="true" aria-haspopup="true">
+                        <a href="#" class="inline-flex justify-center w-fer-graull shadow-sm px-4 py-2 text-sm font-medium focus:outline-none" id="menu-actors" aria-expanded="true" aria-haspopup="true">
                             Actors
                         </a>
                     </div>
