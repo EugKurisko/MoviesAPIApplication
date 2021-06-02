@@ -12,5 +12,8 @@
     <div class="container bg-green-600">
         @yield('content')
     </div>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    
 </body>
 </html>
