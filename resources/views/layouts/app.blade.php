@@ -9,7 +9,7 @@
 </head>
 <body class="font-sans">
     @include('layouts.nav')
-    <div class="container bg-green-600">
+    <div>
         @yield('content')
     </div>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
