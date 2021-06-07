@@ -1,6 +1,6 @@
 <h1 class="uppercase font-bold text-lg tracking-wider">{{ $title }} Movies</h1>
             <div class="grid grid-cols-5 gap-x-3 gap-y-4 py-5">
-                @foreach ($popularMovies as $movie)
+                @foreach ($movies as $movie)
                     <div class="mt-8 shadow-xl border-1 border-solid border-white rounded-3xl">
                         <div>
                             <a href="#">
@@ -23,6 +23,15 @@
                             <div class="mr-4 w-11 h-11 bg-black border-2 border-solid border-green-600 rounded-full">
                                 <span class="block text-white text-center p-2">{{ $movie['vote_average']*10 }}%</span>
                             </div>
+                        </div>
+                        <div class="mx-5 mb-2">
+                            @foreach ($genres as $genre)
+                                @foreach ($movie['genre_ids'] as $movieGenreId)
+                                    @if ($movieGenreId === $genre['id'])
+                                            |{{ $genre['name'] }}
+                                    @endif
+                                @endforeach
+                            @endforeach
                         </div>
                     </div>
                 @endforeach

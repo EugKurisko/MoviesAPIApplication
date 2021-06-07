@@ -14,45 +14,32 @@ class MoviesController extends Controller
      */
     public function index()
     {
+        //get movie categoty
         $url = explode('/', url()->current());
         $category = end($url);
         $title = 'Popular Movies';
         $title = $category = match ($category) {
             'movies' => 'popular',
-            'popular' => 'popular',
-            'upcoming' => 'upcoming',
             'top-rated' => 'top_rated',
             'now-playing' => 'now_playing',
+            default => $category
         };
+
         $title = ucwords(str_replace('_', ' ', $title));
-        $popularMovies = Http::withToken(config('services.tmdb.token'))
+        $movies = Http::withToken(config('services.tmdb.token'))
             ->get("https://api.themoviedb.org/3/movie/$category")
             ->json()['results'];
+
+        //get genres
+        $genres = Http::withToken(config('services.tmdb.token'))
+            ->get("https://api.themoviedb.org/3/genre/movie/list")
+            ->json()['genres'];
+
         return view('pages.show', [
-            'popularMovies' => $popularMovies,
+            'movies' => $movies,
+            'genres' => $genres,
             'title' => $title
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**

@@ -2,7 +2,7 @@
 @section('content')
     <div class="container mx-auto px-5 pt-16">
         <div class="popular-movies">
-            <x-display :popularMovies="$popularMovies" :title="$title"/>
+            <x-display :movies="$movies" :title="$title" :genres="$genres"/>
             {{-- <h1 class="uppercase font-bold text-lg tracking-wider">Popular Movies</h1>
             <div class="grid grid-cols-5 gap-x-3 gap-y-4 py-5">
                 @foreach ($popularMovies as $movie)
