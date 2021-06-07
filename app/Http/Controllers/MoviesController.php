@@ -14,13 +14,24 @@ class MoviesController extends Controller
      */
     public function index()
     {
+        $url = explode('/', url()->current());
+        $category = end($url);
+        $title = 'Popular Movies';
+        $title = $category = match ($category) {
+            'movies' => 'popular',
+            'popular' => 'popular',
+            'upcoming' => 'upcoming',
+            'top-rated' => 'top_rated',
+            'now-playing' => 'now_playing',
+        };
+        $title = ucwords(str_replace('_', ' ', $title));
         $popularMovies = Http::withToken(config('services.tmdb.token'))
-            ->get('https://api.themoviedb.org/3/movie/popular')
+            ->get("https://api.themoviedb.org/3/movie/$category")
             ->json()['results'];
-        // echo "<pre>";
-        // var_dump($popularMovies);
-        // echo "</pre>";
-        return view('pages.show')->with('popularMovies', $popularMovies);
+        return view('pages.show', [
+            'popularMovies' => $popularMovies,
+            'title' => $title
+        ]);
     }
 
     /**

@@ -1867,11 +1867,11 @@ function removeContent() {
 }
 
 function addMovies() {
-  return "\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-0\">Popular</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\"\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-1\">Current Movies</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\"\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Upcoming</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\"\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Rated</a>\n        ";
+  return "\n        <a href=\"/movies\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-0\">Popular</a>\n        <a href=\"/movies/now-playing\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\"\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-1\">Now Playing</a>\n        <a href=\"/movies/upcoming\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\"\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Upcoming</a>\n        <a href=\"/movies/top-rated\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\"\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Top Rated</a>\n        ";
 }
 
 function addTVShows() {
-  return "\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-0\">Popular</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-1\">Today Online</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Now Online</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Rated</a>\n    ";
+  return "\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-0\">Popular</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-1\">Airing Today</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">On The Air</a>\n        <a href=\"#\" class=\"text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200\" role=\"menuitem\" tabindex=\"-1\" id=\"menu-item-2\">Top Rated</a>\n    ";
 }
 
 function addActors() {

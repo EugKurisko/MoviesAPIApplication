@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/moviesp', [MoviesController::class, 'index'])->name('movies.index');
+Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
+Route::get('/movies/upcoming', [MoviesController::class, 'index'])->name('movies.index');
+Route::get('/movies/top-rated', [MoviesController::class, 'index'])->name('movies.index');
+Route::get('/movies/now-playing', [MoviesController::class, 'index'])->name('movies.index');
 
-Route::get('/popularm', function () {
-    return view('pages.movies');
-});
+// Route::resource('movies', MoviesController::class);//->names(['/upcoming' => 'movies.index']);

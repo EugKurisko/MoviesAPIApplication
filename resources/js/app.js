@@ -43,19 +43,19 @@ function removeContent() {
 
 function addMovies() {
     return `
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-0">Popular</a>
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"" role="menuitem" tabindex="-1" id="menu-item-1">Current Movies</a>
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"" role="menuitem" tabindex="-1" id="menu-item-2">Upcoming</a>
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"" role="menuitem" tabindex="-1" id="menu-item-2">Rated</a>
+        <a href="/movies" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-0">Popular</a>
+        <a href="/movies/now-playing" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"" role="menuitem" tabindex="-1" id="menu-item-1">Now Playing</a>
+        <a href="/movies/upcoming" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"" role="menuitem" tabindex="-1" id="menu-item-2">Upcoming</a>
+        <a href="/movies/top-rated" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200"" role="menuitem" tabindex="-1" id="menu-item-2">Top Rated</a>
         `;
 }
 
 function addTVShows() {
     return `
         <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-0">Popular</a>
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-1">Today Online</a>
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-2">Now Online</a>
-        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-2">Rated</a>
+        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-1">Airing Today</a>
+        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-2">On The Air</a>
+        <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200" role="menuitem" tabindex="-1" id="menu-item-2">Top Rated</a>
     `;
 }
 

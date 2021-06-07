@@ -2,15 +2,8 @@
 @section('content')
     <div class="container mx-auto px-5 pt-16">
         <div class="popular-movies">
-            <h1 class="uppercase font-bold text-lg tracking-wider">Popular Movies</h1>
-            {{-- <div class="flex">
-                <aside class="mr-9">
-                    <ul class="filters">
-                        <li class="font-semibold text-lg">Sort</li>
-                        <li class="font-semibold text-lg">Filters</li>
-                    </ul>
-                </aside>
-            </div> --}}
+            <x-display :popularMovies="$popularMovies" :title="$title"/>
+            {{-- <h1 class="uppercase font-bold text-lg tracking-wider">Popular Movies</h1>
             <div class="grid grid-cols-5 gap-x-3 gap-y-4 py-5">
                 @foreach ($popularMovies as $movie)
                     <div class="mt-8 shadow-xl border-1 border-solid border-white rounded-3xl">
@@ -38,7 +31,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

@@ -7,13 +7,23 @@ use Illuminate\View\Component;
 class display extends Component
 {
     /**
+     * The alert type.
+     *
+     * @var array
+     */
+    public $popularMovies;
+    public $title;
+    /**
      * Create a new component instance.
      *
+     * @param array $popularMovies
+     * 
      * @return void
      */
-    public function __construct()
+    public function __construct($popularMovies, $title)
     {
-        //
+        $this->popularMovies = $popularMovies;
+        $this->title = $title;
     }
 
     /**
@@ -23,6 +33,6 @@ class display extends Component
      */
     public function render()
     {
-        return view('components.display');
+        return view('components.display'); //->with('popularMovies', $this->popularMovies);
     }
 }
