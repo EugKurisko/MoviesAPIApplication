@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class display extends Component
+class Movies extends Component
 {
     public $movies;
     public $title;
@@ -24,6 +24,6 @@ class display extends Component
      */
     public function render()
     {
-        return view('components.display');
+        return view('components.movies');
     }
 }

@@ -3,39 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
+use App\Http\Traits\CategoryDataTrait;
 
 class MoviesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    use CategoryDataTrait;
     public function index()
     {
-        //get movie categoty
-        $url = explode('/', url()->current());
-        $category = end($url);
-        $title = 'Popular Movies';
-        $title = $category = match ($category) {
-            'movies' => 'popular',
-            'top-rated' => 'top_rated',
-            'now-playing' => 'now_playing',
-            default => $category
-        };
-
+        $title = $category = $this->getCategoryName();
         $title = ucwords(str_replace('_', ' ', $title));
-        $movies = Http::withToken(config('services.tmdb.token'))
-            ->get("https://api.themoviedb.org/3/movie/$category")
-            ->json()['results'];
-
-        //get genres
-        $genres = Http::withToken(config('services.tmdb.token'))
-            ->get("https://api.themoviedb.org/3/genre/movie/list")
-            ->json()['genres'];
-
-        return view('pages.show', [
+        $movies = $this->getContentFor('movie', $category);
+        //dd($movies);
+        $genres = $this->getGenresFor('movie');
+        //dd($genres);
+        return view('movies.index', [
             'movies' => $movies,
             'genres' => $genres,
             'title' => $title
